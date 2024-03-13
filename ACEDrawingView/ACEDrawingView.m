@@ -205,7 +205,7 @@
 
 - (UIImage *)applyDrawToImage:(UIImage *)baseImage
 {
-    UIImage *drawings = [self image];
+    UIImage *drawings = [self drawings];
 
     if (drawings == nil){
         drawings = baseImage;
