@@ -206,6 +206,10 @@
 - (UIImage *)applyDrawToImage:(UIImage *)baseImage
 {
     UIImage *drawings = [self image];
+
+    if (drawings == nil){
+        drawings = baseImage;
+    }
     
     // scale drawings to size of base image
     drawings = (baseImage.size.width > baseImage.size.height) ? [self scaleImage:drawings proportionallyToWidth:baseImage.size.width] : [self scaleImage:drawings proportionallyToHeight:baseImage.size.height];
